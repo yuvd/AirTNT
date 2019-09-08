@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources: units, only: []
+  resources :units
   devise_for :users
-  root to: 'pages#home'
+  root to: 'units#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
