@@ -11,7 +11,7 @@ class ApplicationPolicy
   end
 
   def show?
-    false
+    true
   end
 
   def create?
@@ -19,11 +19,11 @@ class ApplicationPolicy
   end
 
   def new?
-    create?
+    true
   end
 
   def update?
-    false
+    true
   end
 
   def edit?

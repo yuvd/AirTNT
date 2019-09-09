@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :units do
+    resources :bookings, only: [:new, :create, :edit, :update]
+  end
+
+  resources :bookings, only: [:show, :index, :destroy]
+
   root to: 'units#index'
   
   get 'profile', to: 'dashboards#profile'

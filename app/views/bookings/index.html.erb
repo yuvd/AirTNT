@@ -1,0 +1,30 @@
+
+
+
+<div class='banner_showpage ' style="background-image: url('https://images.unsplash.com/photo-1457524461416-8796b6d23efb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80 750w')">
+  <div class="container">
+    <h1 class='mt-3 text-light'>Your bookings</h1>
+    <p></p>
+  </div>
+</div>
+
+<div class='container'>
+  <div class='d-flex flex-row bd-highlight mb-3'>
+    <p><%= link_to "🗑", units_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
+    <p><%= link_to "Go back to home page", root_path %></p>
+  </div>
+</div>
+
+<% @bookings.each do |booking| %>
+
+<div class="container card p-5 mt-3">
+  <p> - TARGET -</p>
+  <p>Target Name <%= booking.target_name %></p>
+  <p>Target Address <%= booking.target_address %></p>
+  <p> - DATES -</p>
+  <p>Start Date <%= booking.start_date %></p>
+  <p>Start Date <%=  booking.start_date %></p>
+  <p> - UNIT -</p>
+  <p>Unit <%= booking.unit_id %></p>
+</div>
+ <% end %>

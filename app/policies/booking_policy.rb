@@ -1,9 +1,8 @@
-class UnitPolicy < ApplicationPolicy
+class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve?
       scope.all
     end
-  end
 
     def index?
       true
@@ -18,10 +17,19 @@ class UnitPolicy < ApplicationPolicy
     end
 
     def create?
-      user != nil
+      true
     end
 
-  def edit?
-    true
+    def update?
+      true
+    end
+
+    def edit?
+      update?
+    end
+
+    def destroy?
+      true
+    end
   end
 end

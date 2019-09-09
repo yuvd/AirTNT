@@ -6,12 +6,18 @@ class UnitsController < ApplicationController
   def index
     @units = policy_scope(Unit)
   end
-  
+
+  def show
+    @unit = Unit.find(params[:id])
+    @booking = Booking.new
+    authorize @unit
+  end
+
   def new
     @unit = Unit.new
     authorize @unit
   end
-  
+
   def create
     @unit = Unit.new(unit_params)
     @unit.user = current_user
@@ -20,7 +26,6 @@ class UnitsController < ApplicationController
       @unit.save
       redirect_to '/'
     else
-      
       render :new
     end
   end
