@@ -3,6 +3,7 @@ class UnitPolicy < ApplicationPolicy
     def resolve?
       scope.all
     end
+  end
 
     def index?
       true
@@ -19,5 +20,8 @@ class UnitPolicy < ApplicationPolicy
     def create?
       user != nil
     end
+
+  def edit?
+    true
   end
 end
