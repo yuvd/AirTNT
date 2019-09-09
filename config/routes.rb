@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   
   get 'profile', to: 'dashboards#profile'
   
-  resources :units, only: %w[show edit]
+  resources :units
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

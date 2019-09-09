@@ -15,6 +15,7 @@ class UnitsController < ApplicationController
   def create
     @unit = Unit.new(unit_params)
     @unit.user = current_user
+    authorize @unit
     if @unit.valid?
       @unit.save
       redirect_to '/'
