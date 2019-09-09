@@ -3,17 +3,13 @@ class UnitPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def index
-      true
-    end
+  def new
+    create?
+  end
 
-    def new
-      create?
-    end
-
-    def create
-      user != nil
-    end
+  def create
+    user != nil
   end
 end

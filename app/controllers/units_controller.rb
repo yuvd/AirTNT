@@ -1,13 +1,15 @@
 class UnitsController < ApplicationController
-  #before_action :authenticate_user!
-  #skip_before_action :authenticate_user!, only: :index, :new
+  before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:index, :new]
+
 
   def index
-    @units = Unit.all
+    @units = policy_scope(Unit)
   end
   
   def new
     @unit = Unit.new
+    authorize @unit
   end
   
   def create
