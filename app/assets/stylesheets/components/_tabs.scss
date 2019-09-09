@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Play:400,700|Unica+One&display=swap');
+
+
+.tabs-underlined {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-family: 'Play', sans-serif;
+}
+
+.tabs-underlined .tab-underlined {
+  color: white;
+  padding: 8px;
+  margin: 8px 16px;
+  // opacity: .2;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+
+.tabs-underlined .tab-underlined.active {
+  // opacity: 0.1;
+  border-bottom: 2px solid white;
+}
+
+// a:hover {
+//   font-weight: bold;
+// }
