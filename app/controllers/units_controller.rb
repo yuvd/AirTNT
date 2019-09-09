@@ -2,7 +2,6 @@ class UnitsController < ApplicationController
   before_action :authenticate_user!
   skip_before_action :authenticate_user!, only: [:index, :new]
 
-
   def index
     @units = policy_scope(Unit)
   end
@@ -15,6 +14,7 @@ class UnitsController < ApplicationController
 
   def new
     @unit = Unit.new
+    # @booking = Booking.new
     authorize @unit
   end
 
@@ -30,10 +30,6 @@ class UnitsController < ApplicationController
     end
   end
 
-  def show
-    @unit = Unit.find(params[:id])
-    skip_authorization
-  end
 
   def edit
     @unit = Unit.find(params[:id])
@@ -42,7 +38,7 @@ class UnitsController < ApplicationController
 
   def update
   end
-  
+
   def unit_params
     params.require(:unit).permit(:name, :user, :photo, :category, :description)
   end
