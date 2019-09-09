@@ -49,6 +49,25 @@ header .overlay {
   }
 }
 
+.banner-p {
+  font-family: 'Helvetica';
+  font-size: 20px;
+  font-weight: 300;
+  p span {
+    color: red;
+  }
+}
+
+// .banner-p2 {
+//   color: #34623F;
+
+// }
+
 .text-white h1 {
   font-family: 'Monoton', cursive;
+}
+
+.banner-p {
+  display: flex;
+
 }

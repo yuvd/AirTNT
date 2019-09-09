@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Play:400,700|Unica+One&display=swap');
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -9,4 +11,12 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+
+
+.navbar-brand h2 {
+  font-family: 'Monoton', cursive;
+  font-size: 24px;
+  color: #34623F;
 }
