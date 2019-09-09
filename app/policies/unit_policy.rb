@@ -1,18 +1,18 @@
 class UnitPolicy < ApplicationPolicy
   class Scope < Scope
-    def resolve?
+    def resolve
       scope.all
     end
 
-    def index?
+    def index
       true
     end
 
-    def new?
+    def new
       create?
     end
 
-    def create?
+    def create
       user != nil
     end
   end
