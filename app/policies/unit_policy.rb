@@ -12,4 +12,8 @@ class UnitPolicy < ApplicationPolicy
   def create
     user != nil
   end
+
+  def edit?
+    true
+  end
 end

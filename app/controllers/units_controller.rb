@@ -23,6 +23,19 @@ class UnitsController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @unit = Unit.find(params[:id])
+    skip_authorization
+  end
+
+  def edit
+    @unit = Unit.find(params[:id])
+    authorize @unit
+  end
+
+  def update
+  end
   
   def unit_params
     params.require(:unit).permit(:name, :user, :photo, :category, :description)
