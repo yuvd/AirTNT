@@ -1,0 +1,35 @@
+
+<div class='banner_showpage' style="background-image: url(<%= @unit.photo %>);">
+  <div class="container">
+    <h1 class='mt-3'><%=  @unit.name %></h1>
+    <p></p>
+  </div>
+</div>
+
+<div class='container'>
+  <div class='d-flex flex-row bd-highlight mb-3'>
+    <p><%= link_to "🗑", units_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
+    <p><%= link_to "Go back to home page", root_path %></p>
+  </div>
+</div>
+
+<div class="container card p-5 mt-3">
+  <p>CATEGORY:</p>
+  <%= @unit.category %>
+</div>
+
+
+<div class="container card p-5 mt-3">
+  <p>DESCRIPTION:</p>
+  <%= @unit.description %>
+</div>
+
+
+<div class="container card p-5 mt-3">
+  <p>BOOK THIS UNIT</p>
+  <%= render 'form_book_unit'%>
+
+</div>
+
+
+
