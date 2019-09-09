@@ -6,11 +6,11 @@ class UnitPolicy < ApplicationPolicy
   end
 
   def new
-    create?
+    true
   end
 
   def create
-    user != nil
+    true
   end
 
   def edit?
