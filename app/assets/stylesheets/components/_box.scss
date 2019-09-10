@@ -3,6 +3,7 @@
 
 .btn-gradient {
   color: white;
+  width: 200px;
   height: 50px;
   padding: 8px 24px;
   border-radius: 4px;
@@ -25,7 +26,7 @@
   flex-direction: column;
   border-top: 1px solid #34623F;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   align-items: center;
 
   .box-overlay {
@@ -53,6 +54,7 @@
   // margin-top: 0px;
   border-bottom: 1px solid gray;
   width: 220px;
+  margin: 0 5px;
 }
 .unit-card img {
   height: 150px;
@@ -90,7 +92,7 @@
 .cards-scroll {
   display: flex;
   height: 80%;
-  width: 50%;
+  width: 69%;
   overflow-x: scroll;
   overflow-y: hidden;
 }
@@ -98,3 +100,7 @@
 //   display: flex;
 //   justify-content: space-evenly;
 // }
+
+#controlls {
+  text-align: center;
+}
