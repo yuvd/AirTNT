@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton|Play:400,700|Unica+One&display=swap');
 
 
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .btn-gradient {
   color: white;
   width: 200px;
@@ -38,7 +44,7 @@
     background-color: #F4F4F4;
     position: relative;
     bottom: 16px;
-    left: -600px;
+    left: -630px;
     padding: 0 12px;
     width: 150px;
     font-family: 'Play', sans-serif;
@@ -88,13 +94,13 @@
   height: 250px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
 }
 
 .cards-scroll {
   display: flex;
   height: 80%;
-  width: 69%;
+  width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
 }
