@@ -1,7 +1,13 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = policy_scope(Booking)
+    @bookings = policy_scope(Booking).geocoded
+    @markers = @bookings.map do |booking|
+      {
+        lat: booking.latitude,
+        lng: booking.longitude
+      }
+    end
   end
 
   def create
@@ -9,12 +15,11 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.unit = @unit
-    @booking.save
     authorize @booking
+    @booking.save
     if @booking.valid?
       redirect_to bookings_path
     else
-      raise
       render :new
     end
   end
@@ -27,13 +32,17 @@ class BookingsController < ApplicationController
   def edit
   end
 
-  def show
-  end
-
   def update
   end
 
   def destroy
+    skip_authorization
+    @booking = Booking.find(params[:id])
+    if @booking.destroy!
+      redirect_to bookings_path
+    else
+      flash[:alert] = 'problem in controller'
+    end
   end
 
   def booking_params

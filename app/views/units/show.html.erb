@@ -11,32 +11,29 @@
   <!-- <div class='d-flex flex-row bd-highlight mb-3'>
     <p><%= link_to "Go back to home page", root_path %></p>
   </div> -->
-   <div class="card card-header mt-3 mb-3 border-radius border">
-    <div class="d-flex justify-content-between">
+   <div class="card card-header mt-3 mb-3 border-radius border shadow-sm p-3 mb-1">
+    <div class="d-flex justify-content-between font-weight-bold">
     <p>Details</p>
     <p><%= link_to "Delete Unit 🗑", units_path, method: :delete, data: {confirm: "Deleting the unit. Are you sure?"} %></p>
     </div>
   </div>
 
 
-<div class="card p-3 mt-3">
-  <p>CATEGORY:</p>
+<div class="card p-3 mt-3 shadow-sm p-3 mb-1">
+  <p class="font-weight-bold">CATEGORY</p>
   <%= @unit.category %>
 </div>
 
 
-<div class="card p-3 mt-3">
+<div class="card p-3 mt-3 shadow-sm p-3 mb-1">
   <p>DESCRIPTION:</p>
   <%= @unit.description %>
 </div>
 
 
-<div class="card p-3 mt-3">
+<div class="card p-3 mt-3 shadow-sm p-3 mb-1">
   <p>BOOK THIS UNIT</p>
   <%= render 'form_book_unit', booking: @booking, unit: @unit %>
 
 </div>
 </div>
-
-
-
