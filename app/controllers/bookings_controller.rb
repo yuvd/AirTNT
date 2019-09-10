@@ -1,9 +1,8 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = policy_scope(Booking)
-    @bookings = Booking.geocoded
-    @markerd = @bookings.map do |booking|
+    @bookings = policy_scope(Booking).geocoded
+    @markers = @bookings.map do |booking|
       {
         lat: booking.latitude,
         lng: booking.longitude
