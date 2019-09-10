@@ -39,8 +39,10 @@ Your Bookings  </div>
         <div class="col-sm  ">
           <p></p>
           <p class="font-weight-bold"> UNIT </p>
-          <p> <%= image_tag  booking.unit.photo %></p>
-          <p> Unit name: <%= booking.unit.name %></p>
+       <!--     <p> <%= image_tag  booking.unit.photo %></p> -->
+          <p> Name: <%= booking.unit.name %></p>
+          <p> Description: <%= booking.unit.description %></p>
+          <p> ID: <%= booking.unit.id %></p>
         </div>
 
         <div class="col-sm text-right ">
