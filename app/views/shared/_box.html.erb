@@ -8,35 +8,32 @@
     <a class="btn btn-gradient mt-5" href="#">Category 2</a>
     <a class="btn btn-gradient mt-5" href="#">Category 3</a>
   </div>
-
-
+</div>
+<!--
   <div class="cards">
     <% @units.each do |unit| %>
-      <div class="card">
-      <img src="<%= unit.photo %> " alt="">
-      <%= unit.category %>
-      </div>
+      <%= link_to unit_path(unit) do  %>
+        <div class="unit-card">
+          <img src="<%= unit.photo %> " alt="">
+          <p><%= unit.category %></p>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
-    </div>
+ -->
+<div class="box-scroll">
+  <div class="cards-scroll">
+    <% @units.each do |unit| %>
+      <%= link_to unit_path(unit) do  %>
+        <div class="unit-card">
+          <img src="<%= unit.photo %> " alt="">
+          <p><%= unit.category %></p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
-
 </div>
 
-
-
-
-
-
-
-  <!--   <div class="row">
-      <div class="col-md-8 mx-auto">
-        <p>The HTML5 video element uses an mp4 video as a source. Change the source video to add in your own background! The header text is vertically centered using flex utilities that are build into Bootstrap 4.</p>
-        <p>The overlay color can be changed by changing the <code>background-color</code> of the <code>.overlay</code> class in the CSS.</p>
-        <p>Set the mobile fallback image in the CSS by changing the background image of the header element within the media query at the bottom of the CSS snippet.</p>
-        <p class="mb-0">
-          Created by <a href="https://startbootstrap.com">Start Bootstrap</a>
-        </p>
-      </div>
-    </div> -->
+<!-- overflow-x: scroll;
+overflow-y: hidden; -->
