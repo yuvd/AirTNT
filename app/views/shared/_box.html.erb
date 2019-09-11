@@ -4,7 +4,7 @@
     <div class="box-overlay">
       <h4>Categories</h4>
     </div>
-  
+
     <div class="container d-flex justify-content-around mb-3 p-0">
       <div class="category relationship">
         <i class="fas fa-heart-broken category_title_1"></i>
@@ -29,6 +29,7 @@
     </div>
 
       </div>
+
 <div class="box-scroll">
   <div class="cards-scroll">
     <% @units.each do |unit| %>
@@ -37,12 +38,14 @@
       <div class="view overlay mask rgba-red-light">
         <img src="<%= unit.photo %> " alt="">
         <p><%= unit.category %></p>
+      </div>
     </div>
     <% end %>
     <% end %>
   </div>
 </div>
 </div>
+
 
 <!-- <p id="controlls"><<  >></p> -->
 
