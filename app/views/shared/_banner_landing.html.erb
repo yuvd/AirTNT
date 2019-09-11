@@ -10,15 +10,39 @@
         <div class="w-100 text-white">
           <h1 class="display-3">airTNT</h1>
           <div class="banner-p d-flex justify-content-center">
-            <p class="lead mb-0">Authentic local paramilitary units. <span>At your command.</span></p>
+            <p class="lead mb-0">Claim your dues. <span>Successfully.</span></p>
           </div>
           <!-- <a class="btn btn-gradient mt-5" href="#">create an account</a> -->
         </div>
       </div>
     </div>
   </header>
-
-  <section class="my-5">
+  <section>
+  <div class="pitch" id="pitch-for-customer", style="text-align: center;">
+          <%=image_tag("soldier", height: "100%", width: "35%", class:"pitch-image")%>
+          <div>
+            <h4 class="pitch-title mb-3"><span style="color: white;", id ="pitch-text">Sometimes, words are enough. For all other times,</span> airTNT.</h4>
+            <p>We know how hard it is to be locked in conflict seemingly forever. Our mission is to help people all around the globe solve their problems quickly and efficiently, while supporting local paramilitary units.</p>
+          </div>
+        </div>
+  </section>
+  <section>
+  <div class="pitch mb-5" id="pitch-for-units" style="text-align: center;">
+            <div>
+              <h4 class="pitch-title mb-3"><span style="color: white;">Are you ready to change the world of</span> conflict resolution?</h4>
+              <p></p>
+              <%if user_signed_in?%>
+              <h4><%= link_to "Create a unit today!", new_unit_path, class: "btn btn-primary" %></h4>
+              <%else%>
+              <h4><%=link_to("Create a unit today!", new_user_registration_path, class: "btn btn-primary")%></h4>
+              <%end%>
+            </div>
+              <%=image_tag("unit", height: "100%", width: "35%", class:"pitch-image")%>
+        
+  </section>
+  <%
+=begin%>
+ <section class="my-5">
     <div class="container">
       <div class="row">
         <div class="col-md-8 mx-auto">
@@ -28,6 +52,7 @@
             <p>We know how hard it is to be locked in conflict seemingly forever. Our mission is to help people all around the globe solve their problems quickly and efficiently, while supporting local paramilitary units.</p>
           </div>
         </div>
+      </div>
         <div class="row">
           <div class="col-md-8 mx-auto">
             <div id="pitch-for-units">
@@ -36,6 +61,7 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
-  </section>
+  </section> 
+<%
+=end%>
