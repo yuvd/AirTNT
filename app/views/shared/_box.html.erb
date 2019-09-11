@@ -4,6 +4,7 @@
     <div class="box-overlay">
       <h4>Categories</h4>
     </div>
+  
     <div class="container d-flex justify-content-around mb-3 p-0">
       <div class="category relationship">
         <i class="fas fa-heart-broken category_title_1"></i>
@@ -27,15 +28,7 @@
       </div>
     </div>
 
-  
-<%= form_tag units_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a unit"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary mt-2" %>
-  <%end%>
+      </div>
 <div class="box-scroll">
   <div class="cards-scroll">
     <% @units.each do |unit| %>
@@ -44,7 +37,6 @@
       <div class="view overlay mask rgba-red-light">
         <img src="<%= unit.photo %> " alt="">
         <p><%= unit.category %></p>
-      </div>
     </div>
     <% end %>
     <% end %>
