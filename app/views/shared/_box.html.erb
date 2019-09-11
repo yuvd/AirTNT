@@ -4,7 +4,6 @@
   <div class="box-overlay">
     <h4>Categories</h4>
   </div>
-
   <div class="container d-flex justify-content-between mb-3 p-0">
     <a class="btn btn-gradient mt-5" href="#">Relationship issues</a>
     <a class="btn btn-gradient mt-5" href="#">Financial problems</a>
@@ -12,7 +11,14 @@
     <a class="btn btn-gradient mt-5" href="#">Family issues</a>
   </div>
 </div>
-
+<%= form_tag units_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a unit"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary mt-2" %>
+  <%end%>
 <div class="box-scroll">
   <div class="cards-scroll">
     <% @units.each do |unit| %>
