@@ -1,33 +1,65 @@
 
 <div class="container">
-<div class="box">
-  <div class="box-overlay">
-    <h4>Categories</h4>
-  </div>
+  <div class="box">
+    <div class="box-overlay">
+      <h4>Categories</h4>
+    </div>
+    <div class="container d-flex justify-content-around mb-3 p-0">
+      <div class="category relationship">
+        <i class="fas fa-heart-broken category_title_1"></i>
+        <p class="category_title_1">relationship issues</p>
+      </div>
+      <div class="category finance">
+        <i class="fas fa-hand-holding-usd"></i>
+        <p class="category_title">financial problems</p>
+      </div>
+      <div class="category business">
+        <i class="fas fa-business-time"></i>
+        <p class="category_title">business matters</p>
+      </div>
+      <div class="category family">
+        <i class="fas fa-home"></i>
+        <p class="category_title">family disputes</p>
+      </div>
+      <div class="category neighbour">
+        <i class="fas fa-user-friends"></i>
+        <p class="category_title">neighbour conflicts</p>
+      </div>
+    </div>
 
-  <div class="container d-flex justify-content-between mb-3 p-0">
-    <a class="btn btn-gradient mt-5" href="#">Relationship issues</a>
-    <a class="btn btn-gradient mt-5" href="#">Financial problems</a>
-    <a class="btn btn-gradient mt-5" href="#">Neighbour disputes</a>
-    <a class="btn btn-gradient mt-5" href="#">Family issues</a>
+  <!-- <div class="container d-flex justify-content-around mb-3 p-0">
+    <i class="fas fa-heart-broken category_title_1"></i>
+    <i class="fas fa-hand-holding-usd"></i>
+    <i class="fas fa-business-time"></i>
+    <i class="fas fa-home"></i>
+    <i class="fas fa-user-friends"></i>
   </div>
+  <div class="container d-flex justify-content-around">
+    <p class="category_title_1">relationship issues</p>
+    <p class="category_title">financial problems</p>
+    <p class="category_title">business matters</p>
+    <p class="category_title">family disputes</p>
+    <p class="category_title">neighbour conflicts</p>
+  </div> -->
 </div>
 
 <div class="box-scroll">
   <div class="cards-scroll">
     <% @units.each do |unit| %>
-      <%= link_to unit_path(unit) do  %>
-        <div class="unit-card">
-          <img src="<%= unit.photo %> " alt="">
-          <p><%= unit.category %></p>
-        </div>
-      <% end %>
+    <%= link_to unit_path(unit) do  %>
+    <div class="unit-card">
+      <div class="view overlay mask rgba-red-light">
+        <img src="<%= unit.photo %> " alt="">
+        <p><%= unit.category %></p>
+      </div>
+    </div>
+    <% end %>
     <% end %>
   </div>
 </div>
 </div>
 
-  <!-- <p id="controlls"><<  >></p> -->
+<!-- <p id="controlls"><<  >></p> -->
 
 <!-- overflow-x: scroll;
-overflow-y: hidden; -->
+  overflow-y: hidden; -->
