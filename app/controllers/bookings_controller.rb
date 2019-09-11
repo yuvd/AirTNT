@@ -51,6 +51,14 @@ class BookingsController < ApplicationController
     end
   end
 
+  def accept
+    render :new
+  end
+
+  def decline
+    render :new
+  end
+
   def booking_params
     params.require(:booking).permit(:target_name, :target_address, :start_date, :end_date)
   end

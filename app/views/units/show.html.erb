@@ -14,7 +14,11 @@
    <div class="card card-header mt-3 mb-3 border-radius border shadow-sm p-3 mb-1">
     <div class="d-flex justify-content-between font-weight-bold">
     <p>Details</p>
-    <p><%= link_to "Delete Unit 🗑", units_path, method: :delete, data: {confirm: "Deleting the unit. Are you sure?"} %></p>
+    <p>
+    <%if current_user == @unit.user%>
+    <%= link_to "Delete Unit 🗑", units_path, method: :delete, data: {confirm: "Deleting the unit. Are you sure?"} %>
+    <%end%>
+    </p>
     </div>
   </div>
 
@@ -30,10 +34,31 @@
   <%= @unit.description %>
 </div>
 
-
+<%unless current_user == @unit.user%>
 <div class="card p-3 mt-3 shadow-sm p-3 mb-1">
   <p>BOOK THIS UNIT</p>
   <%= render 'form_book_unit', booking: @booking, unit: @unit %>
-
 </div>
+<%else%>
+<div class="card p-3 mt-3 shadow-sm p-3 mb-1">
+  <p>PENDING BOOKING REQUESTS</p>
+   <div class="box-scroll">
+  <div class="cards-scroll">
+    <% @unit.bookings.each do |booking| %>
+      <div class="unit-card" style="text-align: center;">
+      <h1><%=booking.target_name%></h1>
+      <p><%=booking.target_address%></p>
+      <p><%=booking.start_date%></p>
+      <div class="d-flex justify-content-center">
+        <%=link_to "Accept", unit_booking_accept_path(@unit, booking), class:"btn btn-primary mr-2"%> <%=link_to "Decline", unit_booking_deny_path(@unit, booking), class:"btn btn-primary mr-2"%>
+      </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  </div>
+</div>
+<%end%>
+
+
 </div>
