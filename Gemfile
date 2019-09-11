@@ -18,6 +18,7 @@ gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
 gem 'pundit'
+gem 'pg_search'
 gem 'geocoder'
 gem 'dotenv-rails', groups: [:development, :test]
 
