@@ -2,7 +2,9 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #112B0E;
+  color: white;
+  border-bottom: 1px solid #21FF19;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,3 +22,23 @@
   font-size: 24px;
   color: #34623F;
 }
+
+.navbar-nav li {
+    color: white;
+    margin: 0 21px;
+    font-family: 'Play', sans-serif;
+    font-size: 17px;
+    font-style: white;
+    padding: 0 5px;
+
+    &:hover {
+      border: 1px solid #21FF19;
+      border-radius: 5px;
+
+    }
+}
+
+#avatar_img  {
+  border: none;
+}
+
