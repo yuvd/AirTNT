@@ -81,7 +81,9 @@
 .unit-card img {
   height: 500px;
   width: 100%;
+  margin-bottom: 25px;
   background-size: cover;
+  object-fit: cover;
   &:hover {
     height: 510px;
   }
