@@ -12,7 +12,7 @@ class Unit < ApplicationRecord
     against:
      {
        name: 'A',
-       category: 'B', 
+       category: 'B',
        description: 'C'
      },
     using: {

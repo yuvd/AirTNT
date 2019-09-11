@@ -1,18 +1,69 @@
+<div class='banner_show ' style="background-image: url('https://ksr-ugc.imgix.net/assets/011/221/272/390f81f43ef2f84bda1987792e3aad90_original.jpg?ixlib=rb-2.1.0&w=700&fit=max&v=1463423047&auto=format&frame=1&q=92&s=0290d890dcdf0f74c40ae948a3d095a4')">
 
+</div>
 
+<!-- mapbox -->
+<div class="mt-3 mb-5 card-trip">
+  <div
+  id="map"
+  style="width: 100%;
+  height: 400px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  > </div>
+</div>
 
+<!-- cards container -->
+<div class='container booking_container'>
+  <div class="box">
 
-<div class='container'>
+    <div class="box-overlay">
+      <h4 id="available_units">Units</h4>
+    </div>
+    <div class="container d-flex justify-content-around mb-3 p-0">
+      <div class="category relationship">
+        <i class="fas fa-heart-broken category_title_1"></i>
+        <p class="category_title_1">relationship issues</p>
+      </div>
+      <div class="category finance">
+        <i class="fas fa-hand-holding-usd"></i>
+        <p class="category_title">financial problems</p>
+      </div>
+      <div class="category business">
+        <i class="fas fa-business-time"></i>
+        <p class="category_title">business matters</p>
+      </div>
+      <div class="category family">
+        <i class="fas fa-home"></i>
+        <p class="category_title">family disputes</p>
+      </div>
+      <div class="category neighbour">
+        <i class="fas fa-user-friends"></i>
+        <p class="category_title">neighbour conflicts</p>
+      </div>
+    </div>
+    <div class="container cards_booking">
+      <% @units.each do |unit| %>
+      <div class="card-box">
 
-<%= form_tag units_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a unit"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary mt-2" %>
-  <%end%>
+        <%= link_to unit_path(unit) do  %>
+        <div class="card-trip card-scroll mb-3">
+         <div class="pic_booking"> <%= image_tag unit.photo %>
+         </div>
+         <div class="card-unit-infos">
+
+          <h2 class="title"> <%= unit.name%></h2>
+          <p> <%= unit.category%></p>
+
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+
 </div>
 
 
+</div>
 

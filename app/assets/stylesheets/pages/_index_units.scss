@@ -1,0 +1,36 @@
+.box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #34623F;
+  margin-top: 10px;
+  // margin-bottom: 12px;
+  align-items: center;
+
+  .box-overlay {
+    height: 10px;
+  }
+
+
+
+}
+#available_units {
+    background-color: transparent;
+    position: relative;
+    bottom: 16px;
+    left: -558px;
+    padding: 0 12px;
+    width: 250px;
+    font-family: 'Play', sans-serif;
+    font-size: 26px;
+
+  }
+
+.card-unit-infos {
+padding: 10px;
+
+  p {
+    margin-top: 5px;
+    color: gray;
+  }
+}
