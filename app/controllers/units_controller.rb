@@ -3,7 +3,11 @@ class UnitsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :new]
 
   def index
-    @units = policy_scope(Unit)
+    if params[:query].present?
+      @units = policy_scope(Unit).search_by_name_and_category_and_description(params[:query])
+    else
+      @units = policy_scope(Unit)
+    end
   end
 
   def show

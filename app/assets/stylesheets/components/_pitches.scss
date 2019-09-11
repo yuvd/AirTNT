@@ -1,0 +1,26 @@
+
+.pitch {
+  background-size: cover;
+  height: 559.773px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 2px #000;
+}
+
+
+.pitch-title {
+  color:red;
+ font-size: 50px;
+
+}
+
+.pitch-image {
+  object-fit: cover;
+}
+
+#pitch-text {
+  color: white;
+  text-align: center;
+}
