@@ -10,7 +10,7 @@ class UnitsController < ApplicationController
         lat: unit.latitude,
         lng: unit.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { unit: unit }),
-        image_url: helpers.asset_url('target_marker.jpg')
+        image_url: helpers.asset_url('Target red.png')
       }
     end
 
