@@ -29,7 +29,7 @@
       <div class="cards-scroll-1">
         <% @units.each do |user_unit|
           user_unit.bookings.each do |booking| %>
-          <%if booking.pending%>
+          <% if booking.pending %>
           <div class="unit-card-1" style="text-align: center;">
 
 
