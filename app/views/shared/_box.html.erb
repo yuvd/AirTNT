@@ -1,49 +1,52 @@
 
-<div class="container">
-  <div class="box">
-    <div class="box-overlay" id="available_units">
-      <h4>Categories</h4>
-    </div>
 
-    <div class="container d-flex justify-content-around mb-3 p-0">
-      <div class="category relationship">
-        <i class="fas fa-heart-broken category_title_1"></i>
-        <p class="category_title_1">relationship issues</p>
-      </div>
-      <div class="category finance">
-        <i class="fas fa-hand-holding-usd"></i>
-        <p class="category_title">financial problems</p>
-      </div>
-      <div class="category business">
-        <i class="fas fa-business-time"></i>
-        <p class="category_title">business matters</p>
-      </div>
-      <div class="category family">
-        <i class="fas fa-home"></i>
-        <p class="category_title">family disputes</p>
-      </div>
-      <div class="category neighbour">
-        <i class="fas fa-user-friends"></i>
-        <p class="category_title">neighbour conflicts</p>
-      </div>
-    </div>
+  <div class="card_landing">
+  <div class="pitch" id="pitch-for-units" style="text-align: center;">
+    <div>
+      <h4 class="pitch-title m-3 mr-5"><span style="color: white;", id ="pitch-text">Sometimes, words are enough.</h4>
+      <h4 class="pitch-title m-3 mr-5"><span style="color: white;", id ="pitch-text">For all other times,</span> airTNT.</h4>
+      <p></p>
+      <p><%= link_to "Choose a Unit",units_path, class: "btn btn-primary"  %></p>
+        
 
-      </div>
+    <!--   <h4 class="pitch-title mb-3"><span style="color: white;">Are you ready to change the world of</span> conflict resolution?</h4> -->
 
-<div class="box-scroll">
+  <!--   <%if user_signed_in?%>
+      <h4><%= link_to "Create a unit today!", new_unit_path, class: "btn btn-primary" %></h4>
+      <%else%>
+      <h4><%=link_to("Create a unit today!", new_user_registration_path, class: "btn btn-primary")%></h4>
+      <%end%> -->
+      </div>
+    <!--  <%=image_tag("unit", height: "100%", width: "40%", class:"pitch-image")%> -->
+  </div>
+
+  </div>
+</div>
+
+<!-- <div class="text_banner">
+  <p></p>
+  <p>We offer a wide range of professional units.</p>
+</div> -->
+
+
+<div class="box-scroll">s
   <div class="cards-scroll">
     <% @units.each do |unit| %>
     <%= link_to unit_path(unit) do  %>
-    <div class="unit-card">
-        <img src="<%= unit.photo %> " alt="">
-        <p><%= unit.name %></p>
+
+    <div class="unit-card" >
+      <div class="view overlay mask rgba-red-light">
+        <img src="<%= unit.photo %> " alt="photo">
+        <p id="category pt-5"><%= unit.category %></p>
       </div>
 
     <% end %>
     <% end %>
   </div>
+
 </div>
-</div>
+
+
 
 
 <!-- <p id="controlls"><<  >></p> -->

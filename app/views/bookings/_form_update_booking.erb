@@ -1,7 +1,6 @@
 <%= simple_form_for([@unit, @booking]) do |f| %>
   <%= f.input :target_name %>
   <%= f.input :target_address %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
+  <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
   <%= f.submit "Update", class: "btn btn-primary" %>
 <% end %>
