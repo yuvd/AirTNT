@@ -16,11 +16,21 @@
     padding-bottom: 24px ;
     width: 641px ;
     box-shadow: 0 0 15px rgba(17,43,14, 0.4);
-    margin-top: 260px;
     margin-bottom: 50px;
-
 }
 
 .title_show {
   color: white;
+}
+
+
+.show-container {
+  height: 350px;
+  position: relative;
+}
+
+.absolute-container {
+  position: absolute;
+  left: 100px;
+  top: -205px;
 }

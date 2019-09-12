@@ -4,8 +4,12 @@
     <h1 class='mt-3 title_show'><%=  @unit.name %></h1>
     <p></p>
   </div>
+</div>
 
-  <div class="container">
+<div class="show-container">
+
+
+  <div class="container absolute-container">
     <div class="d-flex justify-content-between mb-0">
 
       <div class='info_form'>
@@ -34,10 +38,12 @@
       </div>
 
 
+
       <div class="unit_form mb-5">
         <p>Book this unit</p>
         <%= render 'form_book_unit', booking: @booking, unit: @unit %>
       </div>
+
 
     </div>
   </div>
