@@ -1,4 +1,5 @@
 
+
   <div class="card_landing">
   <div class="pitch" id="pitch-for-units" style="text-align: center;">
     <div>
@@ -6,6 +7,7 @@
       <h4 class="pitch-title m-3 mr-5"><span style="color: white;", id ="pitch-text">For all other times,</span> airTNT.</h4>
       <p></p>
       <p><%= link_to "Choose a Unit",units_path, class: "btn btn-primary"  %></p>
+        
 
     <!--   <h4 class="pitch-title mb-3"><span style="color: white;">Are you ready to change the world of</span> conflict resolution?</h4> -->
 
@@ -31,12 +33,13 @@
   <div class="cards-scroll">
     <% @units.each do |unit| %>
     <%= link_to unit_path(unit) do  %>
+
     <div class="unit-card" >
       <div class="view overlay mask rgba-red-light">
         <img src="<%= unit.photo %> " alt="photo">
         <p id="category pt-5"><%= unit.category %></p>
       </div>
-    </div>
+
     <% end %>
     <% end %>
   </div>
