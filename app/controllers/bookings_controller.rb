@@ -51,6 +51,25 @@ class BookingsController < ApplicationController
     end
   end
 
+  def accept
+    @booking = Booking.find(params[:booking_id])
+    authorize @booking
+    @booking.accepted = true;
+    @booking.pending = false;
+    @booking.save!
+    redirect_to unit_path(@booking.unit)
+  end
+
+  def decline
+    @booking = Booking.find(params[:booking_id])
+    authorize @booking
+    @booking.accepted = false;
+    @booking.pending = false;
+    @booking.save!
+    redirect_to unit_path(@booking.unit)
+    #for logging/customer support purposes, dont delete the booking
+  end
+
   def booking_params
     params.require(:booking).permit(:target_name, :target_address, :start_date, :end_date)
   end

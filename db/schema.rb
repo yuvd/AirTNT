@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_09_11_203746) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.boolean "pending", default: true
+    t.boolean "accepted", default: false
     t.index ["unit_id"], name: "index_bookings_on_unit_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

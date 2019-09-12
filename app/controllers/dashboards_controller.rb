@@ -6,4 +6,9 @@ class DashboardsController < ApplicationController
     @units = current_user.units
   end
 
+  def units
+    authorize :dashboard, :units?
+    @units = current_user.units
+  end
+
 end

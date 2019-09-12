@@ -57,4 +57,7 @@ class UnitsController < ApplicationController
   def unit_params
     params.require(:unit).permit(:name, :user, :photo, :category, :description)
   end
+
+  def accept
+  end
 end
