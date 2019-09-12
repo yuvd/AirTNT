@@ -8,10 +8,7 @@
     margin-top: 18px;
     }
 
-.container i {
-  font-size: 37px;
-  margin-top: 22px;
-}
+
 
 .btn-gradient {
   color: white;
@@ -23,7 +20,7 @@
   background: linear-gradient(#526A50, #112B0E);
   transition: background 0.3s ease;
   border: 1px solid #0F60C4;
-  font-family: 'Play', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn-gradient:hover {
@@ -31,6 +28,13 @@
   color: white;
 }
 
+.pitch-title h4 {
+  font-family: 'Monoton', cursive;
+
+    span {
+      font-family: 'Helvetica'
+    }
+}
 
 .box {
   width: 100%;
@@ -53,7 +57,7 @@
     left: -630px;
     padding: 0 12px;
     width: 400px;
-    font-family: 'Play', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 26px;
 
   }
@@ -74,7 +78,7 @@
 
 
   &:hover {
-
+    text-decoration: none;
     width: 430px;
     height: 500px;
 
@@ -101,12 +105,16 @@
 
 }
 
+#pitch-for-units {
+  font-family: 'Helvetica';
+}
+
 .unit-card p {
   color: white;
   text-decoration: none;
   text-align: center;
-  font-family: 'Play', sans-serif;
-  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
 
   &:hover {
     text-decoration: none;
@@ -131,6 +139,10 @@
   overflow-x: scroll;
   overflow-y: hidden;
   background-color: black;
+
+    a:hover {
+      text-decoration: none;
+    }
 }
 // .buttons {
 //   display: flex;
@@ -144,14 +156,14 @@
 
 .category {
   text-align: center;
-  
+
   &:hover {
     color: #21FF19;
   }
 
   p {
     font-size: 14px;
-    font-family: 'Play', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 8px;
   }
 
@@ -168,7 +180,7 @@
   height: 200px;
   padding: 20px;
   padding: 50px;
-  font-family: 'Play', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
 }
 
