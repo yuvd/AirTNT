@@ -1,13 +1,14 @@
 <div class="card_landing">
-  <div class="pitch" id="pitch-for-units" style="text-align: center;">
+  <div class="pitch d-flex justify-content-center" id="pitch-for-units" style="text-align: center;">
     <div>
-      <h4 class="pitch-title m-3 mr-5"><span style="color: white;", id ="pitch-text">Sometimes, words are enough.</h4>
-      <h4 class="pitch-title m-3 mr-5"><span style="color: white;", id ="pitch-text">For all other times,</span> airTNT.</h4>
+      <h4 class="pitch-title m-3 mr-5"><span style="color: white; text-align: center;", id ="pitch-text">Sometimes, words are enough.</h4>
+      <h4 class="pitch-title m-3 mr-5"><span style="color: white;", id ="pitch-text; text-align: center;">For all other times,</span> airTNT.</h4>
       <p></p>
-      <p><%= link_to "Choose a Unit",units_path, class: "btn btn-primary"  %></p>
+      <p><%= link_to "Browse our catalog",units_path, class: "btn btn-primary"  %></p>
     </div>
   </div>
 </div>
+
 
 <!-- <div class="text_banner">
   <p></p>
@@ -23,7 +24,7 @@
     <div class="unit-card" >
       <div class="view overlay mask rgba-red-light">
         <img src="<%= unit.photo %> " alt="photo">
-        <p id="category pt-5"><%= unit.category %></p>
+        <p id="category pt-5"><%= unit.name %></p>
       </div>
     </div>
     <% end %>
@@ -31,7 +32,15 @@
   </div>
 </div>
 
+<div id="pitch-for-units" style="text-align: center; height:35%; background-color: black;">
+            <div class="mr-10">
+              <h4 class="pitch-title"><span style="color: white;">Are you ready to change the world of</span> conflict resolution?</h4>
+              <p></p>
+              <h4><a class="btn btn-primary" href="/units/new">Create a unit today!</a></h4>
+            </div>
 
+              <img height="100%" width="35%" class="pitch-image" src="/assets/unit-8afa0fbab1d34617ac38f08e80ffd6f598763b19ec2c4a9c760d26024cf80ddc.jpg">
+  </div>
 
 
 <!-- <p id="controlls"><<  >></p> -->
