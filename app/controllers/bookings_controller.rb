@@ -57,8 +57,13 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.accepted = true;
     @booking.pending = false;
-    @booking.save!
-    redirect_to unit_path(@booking.unit)
+    #@booking.save!
+    # redirect_to unit_path(@booking.unit)
+    respond_to do |format|
+      # redirect_to unit_path(@booking.unit)
+      format.js  # <-- will render `app/views/reviews/create.js.erb`
+    end
+
   end
 
   def decline
