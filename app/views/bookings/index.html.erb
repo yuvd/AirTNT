@@ -22,7 +22,7 @@
   <div class="container cards_booking">
     <% @bookings.each do |booking| %>
     <div class="card-trip card-scroll mb-3">
-     <div > <%= image_tag  booking.unit.photo %>
+     <div > <%= image_tag  booking.unit.photo, :class => "image-top"%>
      </div>
 
      <div class="card-trip-infos">
