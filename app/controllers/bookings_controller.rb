@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = policy_scope(Booking).geocoded
+    @bookings = policy_scope(Booking).geocoded.where(user: current_user)
     @markers = @bookings.map do |booking|
       {
         lat: booking.latitude,
@@ -57,12 +57,12 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.accepted = true;
     @booking.pending = false;
-    #@booking.save!
-    # redirect_to unit_path(@booking.unit)
-    respond_to do |format|
-      # redirect_to unit_path(@booking.unit)
-      format.js  # <-- will render `app/views/reviews/create.js.erb`
-    end
+    @booking.save!
+    redirect_to unit_path(@booking.unit)
+    # respond_to do |format|
+    #   # redirect_to unit_path(@booking.unit)
+    #   format.js  # <-- will render `app/views/reviews/create.js.erb`
+    
 
   end
 
