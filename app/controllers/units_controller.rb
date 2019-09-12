@@ -3,6 +3,17 @@ class UnitsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :new]
 
   def index
+    @units = Unit.geocoded #returns flats with coordinates
+
+    @markers = @units.map do |unit|
+      {
+        lat: unit.latitude,
+        lng: unit.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { unit: unit }),
+        image_url: helpers.asset_url('target_marker.jpg')
+      }
+    end
+
     if params[:query].present?
       @units = policy_scope(Unit).search_by_name_and_category_and_description(params[:query])
     else

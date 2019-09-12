@@ -1,0 +1,36 @@
+.btn-primary {
+    color: white;
+    border-color: white;
+    background-color: transparent;
+
+}
+
+
+.info_form {
+
+   background: white ;
+   color: black;
+   border-color: #112B0E;
+    border-radius: 4px ;
+    padding: 32px ;
+    padding-bottom: 24px ;
+    width: 641px ;
+    box-shadow: 0 0 15px rgba(17,43,14, 0.4);
+    margin-bottom: 50px;
+}
+
+.title_show {
+  color: white;
+}
+
+
+.show-container {
+  height: 350px;
+  position: relative;
+}
+
+.absolute-container {
+  position: absolute;
+  left: 100px;
+  top: -205px;
+}

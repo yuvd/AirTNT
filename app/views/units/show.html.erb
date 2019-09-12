@@ -1,44 +1,48 @@
 
-<div class='banner_showpage' style="background-image: url(<%= @unit.photo %>);">
+<div class='banner_new_unit' style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(1,1,1,0.7)), url(<%= @unit.photo %>)">
   <div class="container">
-    <h1 class='mt-3'><%=  @unit.name %></h1>
+    <h1 class='mt-3 title_show'><%=  @unit.name %></h1>
     <p></p>
   </div>
 </div>
 
-<div class='container'>
+<div class="show-container">
+  <div class="container absolute-container">
+    <div class="d-flex justify-content-between mb-0">
 
-  <!-- <div class='d-flex flex-row bd-highlight mb-3'>
-    <p><%= link_to "Go back to home page", root_path %></p>
-  </div> -->
-   <div class="card card-header mt-3 mb-3 border-radius border shadow-sm p-3 mb-1">
-    <div class="d-flex justify-content-between font-weight-bold">
-    <p>Details</p>
-    <p>
-    <%if current_user == @unit.user%>
-    <%= link_to "Delete Unit 🗑", units_path, method: :delete, data: {confirm: "Deleting the unit. Are you sure?"} %>
-    <%end%>
-    </p>
-    </div>
-  </div>
+      <div class='info_form'>
+        <div>
+          <p class="title pb-3"><%=  @unit.name %></p>
 
+          <div class="box">
+          </div>
+          <p> SPECIALIZED ON</p>
+          <%= @unit.category %>
+          <p></p>
+        </div>
 
-<div class="card p-3 mt-3 shadow-sm p-3 mb-1">
-  <p >CATEGORY</p>
-  <%= @unit.category %>
-</div>
+        <div>
+          <p></p>
+        <div class="box mt-5">
+          </div>
+          <p>ABOUT THIS UNIT</p>
+          <%= @unit.description %>
+        </div>
+        <div class="box mt-5">
+          </div>
+        <div class="d-flex justify-content-between font-weight-bold">
+        <%if current_user == @unit.user%>
+          <p><%= link_to "Delete Unit 🗑", units_path, method: :delete, data: {confirm: "Deleting the unit. Are you sure?"} %></p>
+       <% end %>
+        </div>
+      </div>
 
-
-<div class="card p-3 mt-3 shadow-sm p-3 mb-1">
-  <p>DESCRIPTION:</p>
-  <%= @unit.description %>
-</div>
 
 <%unless current_user == @unit.user%>
-<div class="card p-3 mt-3 shadow-sm p-3 mb-1">
-  <p>BOOK THIS UNIT</p>
-  <%= render 'form_book_unit', booking: @booking, unit: @unit %>
-</div>
+   <div class="unit_form mb-5">
+        <p>Book this unit</p>
+        <%= render 'form_book_unit', booking: @booking, unit: @unit %>
+      </div>
 <%else%>
 <div class="bg-white mt-3 shadow-sm p-3 mb-1">
   <p>PENDING BOOKING REQUESTS</p>

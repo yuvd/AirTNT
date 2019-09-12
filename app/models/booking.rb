@@ -8,5 +8,4 @@ class Booking < ApplicationRecord
   validates :target_name, presence: true
   validates :target_address, presence: true
   validates :start_date, presence: true
-  
 end

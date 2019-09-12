@@ -35,6 +35,7 @@ header .container {
   font-size: 16px;
 }
 
+
 header .overlay {
   position: absolute;
   top: 0;
@@ -77,3 +78,14 @@ header .overlay {
   display: flex;
 
 }
+
+.card_landing {
+  background-color: black;
+  box-shadow: 0 0 15px rgba(17,43,14, 0.4);
+}
+
+.target_img {
+  width: 4px
+}
+
+

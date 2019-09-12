@@ -1,4 +1,6 @@
-
+.card-box a {
+  text-decoration: none;
+}
 
 .cards_booking {
   display:grid;
@@ -9,8 +11,11 @@
 }
 
 .title {
+font-family: 'Play', sans-serif;
  color: #112B0E;
+ text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
 
 .container {
   padding-right: 0px;
@@ -33,29 +38,51 @@
   }
 }
 
+.category {
+  text-align: center;
 
+  &:hover {
+    color: #418700;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+    margin-top: 8px;
+  }
+}
 
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(17,43,14, 0.4);
+  border-radius: 4px;
+
+
 }
 
 
-.card-trip img {
-  height: 300px;
+.card-trip .image-top {
   width: 100%;
+  height: 400px;
   object-fit: cover;
 }
 
-.card-trip h2 {
-  font-size: 16px;
+.target_img img {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 45px;
+}
+
+.card-trip h3 {
+  font-size: 23px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 14px;
   opacity: .7;
   margin: 0;
 }
@@ -74,4 +101,12 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.target_img {
+  width: 30px;
+}
+
+.pic img {
+  width: 20px;
 }
