@@ -35,11 +35,10 @@
     <% @units.each do |unit| %>
     <%= link_to unit_path(unit) do  %>
     <div class="unit-card">
-      <div class="view overlay mask rgba-red-light">
         <img src="<%= unit.photo %> " alt="">
-        <p><%= unit.category %></p>
+        <p><%= unit.name %></p>
       </div>
-    </div>
+
     <% end %>
     <% end %>
   </div>

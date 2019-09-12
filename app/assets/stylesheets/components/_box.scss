@@ -9,7 +9,7 @@
     }
 
 .container i {
-  font-size: 32px;
+  font-size: 37px;
   margin-top: 22px;
 }
 
@@ -72,9 +72,11 @@
   margin: 0 5px;
   margin-top: 10px;
 
+
   &:hover {
     width: 230px;
     height: 190px;
+    text-decoration: none;
 
   }
 }
@@ -84,6 +86,7 @@
   background-size: cover;
   &:hover {
     height: 160px;
+    text-decoration: none;
   }
 }
 
@@ -100,6 +103,10 @@
   color: black;
   text-decoration: none;
   text-align: center;
+
+  &:hover {
+    text-decoration: none;
+  }
 
 }
 
@@ -128,17 +135,4 @@
   text-align: center;
 }
 
-.category {
-  text-align: center;
 
-  &:hover {
-    color: #21FF19;
-    cursor: pointer;
-  }
-
-  p {
-    font-size: 14px;
-    font-family: 'Play', sans-serif;
-    margin-top: 8px;
-  }
-}

@@ -35,12 +35,28 @@
   }
 }
 
+.category {
+  text-align: center;
 
+  &:hover {
+    color: #418700;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+    margin-top: 8px;
+  }
+}
 
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(17,43,14, 0.4);
+  border-radius: 4px;
+
+
 }
 
 
