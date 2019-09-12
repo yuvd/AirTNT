@@ -6,8 +6,8 @@ User.destroy_all
 user = User.create!(email: 'jpeterek@google.com', password: 'testtest')
 p user
 
-unit1 = Unit.create!(name: 'The IRS' ,category: 'Relationship Issues', address: 'Allenby 73, Tel Aviv', description: 'Specialized on solving relationship issues', user_id: user.id, photo:'https://lp-cms-production.imgix.net/news/2017/08/bodyguard.jpg?fit=max&w=800&q=40&sharp=10&vib=20')
-unit2 = Unit.create!(name: 'The IRA' ,category: 'Financial Problems', address: 'Ben Yehuda 32, Tel Aviv',  description: 'Specialized on solving financial disputes', user_id: user.id, photo:'https://secure.i.telegraph.co.uk/multimedia/archive/03447/South_African_Mini_3447844b.jpg')
+unit1 = Unit.create!(name: 'The IRA' ,category: 'Relationship Issues', address: 'Allenby 73, Tel Aviv', description: 'Specialized on solving relationship issues', user_id: user.id, photo:'https://lp-cms-production.imgix.net/news/2017/08/bodyguard.jpg?fit=max&w=800&q=40&sharp=10&vib=20')
+unit2 = Unit.create!(name: 'The IRS' ,category: 'Financial Problems', address: 'Ben Yehuda 32, Tel Aviv',  description: 'Specialized on solving financial disputes', user_id: user.id, photo:'https://secure.i.telegraph.co.uk/multimedia/archive/03447/South_African_Mini_3447844b.jpg')
 unit3 = Unit.create!(name: 'Ragnars Raiders' ,category: 'Neighbour disputes', address: 'Hakovshim 14, Tel Aviv',  description: 'Specialized on solving financial disputes', user_id: user.id, photo:'https://pmctvline2.files.wordpress.com/2019/07/scream-resurrection-finale.jpg?w=620&h=420&crop=1')
 unit4 = Unit.create!(name: 'Greenday' ,category: 'Family Matters', address: 'Bograshov 14, Tel Aviv',  description: 'Specialized on solving financial disputes', user_id: user.id, photo:'https://pmcvariety.files.wordpress.com/2019/07/the-bodyguard.jpg?w=1000&h=562&crop=1')
 unit5 = Unit.create!(name: 'Pablos Pablos' ,category: 'Financial Problems', address: 'Gordon 14, Tel Aviv',  description: 'Nothing we cannot due for you', user_id: user.id, photo:'https://cdn.websites.hibu.com/b44ffcdb354947e89cd60e0c13371c97/dms3rep/multi/desktop/Private+Detective+Iowa+Investigations+Investigator.JPG')
