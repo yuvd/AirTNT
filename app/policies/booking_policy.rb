@@ -5,6 +5,14 @@ class BookingPolicy < ApplicationPolicy
     end
   end
 
+  def accept?
+     user == record.unit.user
+  end
+
+  def decline?
+     user == record.unit.user
+  end
+
   def index?
     true
   end
