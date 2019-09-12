@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Helvetica|Montserrat|Play:400,700|Unica+One&display=swap');
+
+
 .banner_show {
   margin-bottom: 56px;
 }
@@ -37,7 +40,7 @@
 .card-unit-index {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(17,43,14, 0.4);
+  box-shadow: 0 0 5px rgba(17,43,14, 0.3);
   border-radius: 4px;
   // width: 200px;
   // height: 150px;
@@ -49,15 +52,15 @@
   height: 260px;
 
     &:hover {
-      width: 260px;
-      height: 280px;
-      text-decoration: none;
+      box-shadow: 0 0 15px rgba(17,43,14, 0.5);
+      // border: 2px solid #112B0E;
     }
+
 
 
   img {
     width: 100%;
-    height: 85%;
+    height: 80%;
     object-fit: cover;
 
     &:hover {
@@ -73,14 +76,26 @@
   grid-gap: 16px;
   padding: 0 16px;
   flex-grow: 1;
+  margin-bottom: 22px;
+
+    a:hover {
+      text-decoration: none;
+    }
 }
 
 
 .card-unit-infos {
-padding: 10px;
+padding: 15px;
+font-family: 'Helvetica';
+color: rgba(50,50,50,0.9);
 
   &:hover {
     text-decoration: none;
+  }
+
+  i {
+    font-size: 16px;
+    // margin-top: 7px;
   }
 
   p {
@@ -97,6 +112,10 @@ padding: 10px;
   width: 110%;
   height: 110%;
 
+}
+.container .category i {
+  font-size: 37px;
+  margin-top: 22px;
 }
 
 #map {

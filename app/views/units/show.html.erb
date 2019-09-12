@@ -11,25 +11,25 @@
 
       <div class='info_form'>
         <div>
-          <p class="title pb-3"><%=  @unit.name %></p>
+          <p class="titles pb-3"><%=  @unit.name %></p>
 
           <div class="box">
           </div>
           <p> SPECIALIZED ON</p>
           <%= @unit.category %>
-          <p></p>
+          <p ></p>
         </div>
 
         <div>
           <p></p>
-          <div class="box my-5">
+           <div class="box mt-5">
           </div>
           <p>ABOUT THIS UNIT</p>
           <%= @unit.description %>
         </div>
         <div class="box mt-5">
         </div>
-        <div class="d-flex justify-content-between font-weight-bold">
+        <div class="d-flex justify-content-between font-weight-bold align-items-end">
           <%if current_user == @unit.user%>
           <p><%= link_to "Delete Unit 🗑", units_path, method: :delete, data: {confirm: "Deleting the unit. Are you sure?"} %></p>
           <% end %>
@@ -45,7 +45,7 @@
       <%else%>
       <div class="unit_form shadow-sm p-3 mb-1">
         <p>PENDING BOOKING REQUESTS</p>
-        <div class="box-scroll">
+        <div class="box">
           <div class="cards-scroll">
             <% @unit.bookings.each do |booking| %>
             <%if booking.pending%>

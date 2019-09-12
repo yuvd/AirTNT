@@ -5,7 +5,8 @@ class BookingsController < ApplicationController
     @markers = @bookings.map do |booking|
       {
         lat: booking.latitude,
-        lng: booking.longitude
+        lng: booking.longitude,
+        image_url: helpers.asset_url('Target red.png')
       }
     end
   end

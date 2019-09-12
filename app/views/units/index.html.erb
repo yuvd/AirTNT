@@ -40,12 +40,18 @@
         <%= link_to unit_path(unit) do  %>
         <div class="card-unit-index">
           <img src="<%= unit.photo %> " alt="">
-          <div class="card-unit-infos">
-            <p><%= unit.name %></p>
-                        <i class="fas fa-hand-holding-usd"></i>
-
+          <div class="card-unit-infos d-flex justify-content-between">
+            <span><%= unit.name %></span>
             <% if unit.category == "Financial Problems" %>
             <i class="fas fa-hand-holding-usd"></i>
+            <% elsif unit.category == "Relationship Issues" %>
+            <i class="fas fa-heart-broken"></i>
+            <% elsif unit.category == "Neighbour disputes" %>
+            <i class="fas fa-user-friends"></i>
+            <% elsif unit.category == "Business Matters" %>
+            <i class="fas fa-business-time"></i>
+            <% elsif unit.category = "Family Matters" %>
+            <i class="fas fa-home"></i>
             <% end %>
           </div>
         </div>
